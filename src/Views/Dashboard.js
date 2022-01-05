@@ -13,7 +13,7 @@ export default class extends AbstractView {
         lorem ipsum dolor sit amet, consectetur adip
         </p>
       <p>
-        View recent <a href="/posts" data-link>Posts</a>
+        View <a href="/posts" data-link>Posts</a>
       </p>
     `;
   }

@@ -2,8 +2,8 @@ import '/css/style.css';
 import RouterManager from './Utilities/RouterManager';
 
 class App {
-  static async init() {
-    await RouterManager.router();
+  static init() {
+    RouterManager.router();
     this.linkClicksHandler();
     this.changeStateHandler();
   }
