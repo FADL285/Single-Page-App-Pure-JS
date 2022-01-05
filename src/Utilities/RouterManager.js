@@ -1,10 +1,15 @@
+import Dashboard from '../Views/Dashboard';
+import Posts from '../Views/Posts';
+import Settings from '../Views/Settings';
+import NotFound from '../Views/NotFound';
+
 export default class {
   static async router() {
     const routes = [
-      { path: '/', view: () => console.log('Dashboard') },
-      { path: '/posts', view: () => console.log('Posts') },
-      { path: '/settings', view: () => console.log('Settings') },
-      { view: () => console.log('404') } // 404 must be the last element in the array
+      { path: '/', view: Dashboard },
+      { path: '/posts', view: Posts },
+      { path: '/settings', view: Settings },
+      { view: NotFound } // 404 must be the last element in the array
     ];
 
     // test each route for potential match
@@ -22,7 +27,9 @@ export default class {
       };
     }
 
-    match.route.view();
+    const view = new match.route.view();
+
+    document.getElementById('app').innerHTML = await view.render();
   }
 
   static navigateTo(url) {
