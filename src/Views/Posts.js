@@ -1,8 +1,8 @@
 import AbstractView from './AbstractView';
 
 export default class extends AbstractView {
-  constructor() {
-    super();
+  constructor(params) {
+    super(params);
     this.setTitle('Dashboard');
   }
 
@@ -13,10 +13,18 @@ export default class extends AbstractView {
         lorem ipsum dolor sit amet, consectetur adip
         </p>
       <ul>
-        <li>Post #1</li>
-        <li>Post #2</li>
-        <li>Post #3</li>
-        <li>Post #4</li>
+        <li>
+          <a href="/posts/1" data-link>Post #1</a>
+        </li>
+        <li>
+          <a href="/posts/2" data-link>Post #2</a>
+        </li>
+        <li>
+          <a href="/posts/3" data-link>Post #3</a>
+        </li>
+        <li>
+          <a href="/posts/4" data-link>Post #4</a>
+        </li>
       </ul>
     `;
   }

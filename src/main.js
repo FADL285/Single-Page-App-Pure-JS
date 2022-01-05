@@ -2,8 +2,8 @@ import '/css/style.css';
 import RouterManager from './Utilities/RouterManager';
 
 class App {
-  static init() {
-    RouterManager.router();
+  static async init() {
+    await RouterManager.router();
     this.linkClicksHandler();
     this.changeStateHandler();
   }
@@ -18,7 +18,9 @@ class App {
   }
 
   static changeStateHandler() {
-    window.addEventListener('popstate', RouterManager.router);
+    window.addEventListener('popstate', () => {
+      RouterManager.router();
+    });
   }
 }
 
