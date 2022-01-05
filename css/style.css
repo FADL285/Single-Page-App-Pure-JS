@@ -3,6 +3,7 @@ body {
   margin: 0 0 0 var(--nav-width);
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 
 .nav {
@@ -12,12 +13,12 @@ body {
   width: var(--nav-width);
   height: 100vh;
   background: #222222;
+  text-align: left;
 }
 
 .nav__link {
   display: block;
   padding: 12px 18px;
-  text-decoration: none;
   color: #eeeeee;
   font-weight: 500;
 }
@@ -33,5 +34,46 @@ body {
 }
 
 a {
+  text-decoration: none;
   color: #009579;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 0.25rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+.card-title {
+  color: #000;
+}
+
+.card-text {
+  color: #323232;
+}
+
+.card-title,
+ul li {
+  margin-bottom: 0.5rem;
 }
